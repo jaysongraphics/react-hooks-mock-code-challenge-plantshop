@@ -20,13 +20,12 @@ function PlantPage() {
   }
 
   const filteredItem = plants.filter(plant => {
-    return (plant.name.toLowerCase().includes(search.toLowerCase())
-    )
+    return (plant.name.toLowerCase().includes(search.toLowerCase()))
   })
 
 function removePlant (id){
-    const newListing = plants.filter(plant => plant.id !== id)
-    setSearch(newListing);
+    const newListing = plants.filter(plant => plant.id !== id);
+    setPlants(newListing);
 }
 
   return (
